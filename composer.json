@@ -1,0 +1,23 @@
+{
+    "name": "hexlet/code",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        },
+        "files": [
+            "src/genDiff.php"
+        ]
+    },
+    "bin": [
+        "bin/gendiff"
+    ],
+    "authors": [
+        {
+            "name": "Vitaly Tarasov",
+            "email": "89269643535@mail.ru"
+        }
+    ],
+    "require": {
+        "docopt/docopt": "^1.0"
+    }
+}
