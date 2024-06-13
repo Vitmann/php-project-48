@@ -1,5 +1,4 @@
 <?php
-
 namespace Hexlet\Code;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
@@ -13,26 +12,26 @@ if (file_exists($autoloadPath1)) {
 
 function genDiff($file1, $file2): string
 {
-    $read1 = file_get_contents($file1);
-    $read1 = json_decode($read1, true);
+    $file1 = file_get_contents($file1); //получаем содержимое файла из полученного пути
+    $file1 = json_decode($file1, true); //конвертируем содержимое файла в json
 
-    $read2 = file_get_contents($file2);
-    $read2 = json_decode($read2, true);
+    $file2 = file_get_contents($file2); //получаем содержимое файла из полученного пути
+    $file2 = json_decode($file2, true); //конвертируем содержимое файла в json
 
-    ksort($read1);
-    ksort($read2);
+    ksort($file1); //сортируем по алфавиту содержимое массива
+    ksort($file2); //сортируем по алфавиту содержимое массива
 
     $result = [];
 
-    foreach ($read1 as $key => $value) {
-        if (array_key_exists($key, $read2)) {
-            if ($read2[$key] === $value) {
+    foreach ($file1 as $key => $value) {
+        if (array_key_exists($key, $file2)) {
+            if ($file2[$key] === $value) {
                 $value = convertType($value);
                 $result[] = "  {$key}: {$value}";
             } else {
                 $value = convertType($value);
                 $result[] = "- {$key}: {$value}";
-                $result[] = "+ {$key}: {$read2[$key]}";
+                $result[] = "+ {$key}: {$file2[$key]}";
             }
         } else {
             $value = convertType($value);
@@ -40,14 +39,14 @@ function genDiff($file1, $file2): string
         }
     }
 
-    foreach ($read2 as $key => $value) {
-        if (!array_key_exists($key, $read1)) {
+    foreach ($file2 as $key => $value) {
+        if (!array_key_exists($key, $file1)) {
             $value = convertType($value);
             $result[] = "+ {$key}: {$value}";
         }
     }
 
-    return '{' . PHP_EOL .  implode(PHP_EOL, $result) . PHP_EOL . '}';
+    return '{' . PHP_EOL . implode(PHP_EOL, $result) . PHP_EOL . '}';
 }
 
 function convertType($value)
