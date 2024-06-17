@@ -5,4 +5,10 @@
       <directory suffix=".php">./src</directory>
     </include>
   </source>
+
+  <report>
+    <clover outputFile="clover.xml"/>
+  </report>
+
+
 </phpunit>
