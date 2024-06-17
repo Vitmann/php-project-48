@@ -29,7 +29,6 @@ class DifferTest extends TestCase
         // тест сравнения плоских JSON файлов
         $this->assertEquals($expected, genDiff('tests/fixtures/file1.json', 'tests/fixtures/file2.json'));
 
-
         echo 'Все тесты пройдены!';
     }
 }
