@@ -23,6 +23,6 @@ jobs:
           CC_TEST_REPORTER_ID: e318e9035ed5a57a0f42e097d09f78870354f64c2659412c4818713c6afa3e70
           XDEBUG_MODE: coverage
         with:
-          coverageCommand: composer exec --verbose phpunit --coverage-clover build/logs/clover.xml tests
+          coverageCommand: vendor/bin/phpunit --coverage-clover test.xml tests
           debug: true
       - run: echo "🍏 This job's status is ${{ job.status }}."
