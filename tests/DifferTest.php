@@ -15,7 +15,6 @@ use function Hexlet\Code\genDiff;
 
 class DifferTest extends TestCase
 {
-
     public function testGendiff(): void
     {
         $expected = '{
@@ -32,4 +31,3 @@ class DifferTest extends TestCase
         echo 'Все тесты пройдены!';
     }
 }
-

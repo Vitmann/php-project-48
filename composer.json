@@ -26,7 +26,8 @@
     "scripts": {
         "test": [
             "@composer install",
-            "phpunit"
+            "phpunit",
+            "phpcs"
         ]
     }
 }
