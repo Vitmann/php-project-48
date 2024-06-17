@@ -25,8 +25,6 @@ jobs:
         with:
           coverageCommand: vendor/bin/phpunit --coverage-clover clover.xml tests
           debug: true
-      - name: Install PhpCS
-        run: composer global require "squizlabs/php_codesniffer=*"
       - name: Run linter
         run: composer exec --verbose phpcs -- --standard=PSR12 src bin
       - run: echo "🍏 This job's status is ${{ job.status }}."
