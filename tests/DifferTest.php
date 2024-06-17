@@ -26,8 +26,8 @@ class DifferTest extends TestCase
 + timeout: 20
 + verbose: true
 }';
-
-        $this->assertEquals($expected, genDiff('src/file1.json', 'src/file2.json'));
+        // тест сравнения плоских JSON файлов
+        $this->assertEquals($expected, genDiff('tests/fixtures/file1.json', 'tests/fixtures/file2.json'));
 
 
         echo 'Все тесты пройдены!';
