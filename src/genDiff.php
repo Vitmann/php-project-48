@@ -1,4 +1,5 @@
 <?php
+
 namespace Hexlet\Code;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
