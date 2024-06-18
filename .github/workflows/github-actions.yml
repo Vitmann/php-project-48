@@ -26,5 +26,5 @@ jobs:
           coverageCommand: vendor/bin/phpunit --coverage-clover clover.xml tests
           debug: true
       - name: Run linter
-        run: composer exec --verbose phpcs -- --standard=PSR12 src bin
+        run: composer exec --verbose phpcs -- --standard=PSR12 src bin tests
       - run: echo "🍏 This job's status is ${{ job.status }}."
