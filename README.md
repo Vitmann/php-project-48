@@ -10,3 +10,6 @@
 Пример работы пакета, сравнение двух плоских Json файлов:
 https://asciinema.org/a/3VIN0euPXy0MoAY5vDTsOWAX4
 
+Пример работы сравнения плоских yml файлов
+https://asciinema.org/a/0B1zG6BVFSX8iHq332bI9KDmk
+

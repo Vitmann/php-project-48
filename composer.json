@@ -5,7 +5,8 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": [
-            "src/genDiff.php"
+            "src/genDiff.php",
+            "src/Parsers.php"
         ]
     },
     "bin": [
@@ -18,7 +19,8 @@
         }
     ],
     "require": {
-        "docopt/docopt": "^1.0"
+        "docopt/docopt": "^1.0",
+        "symfony/yaml": "^6.4"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.5",
